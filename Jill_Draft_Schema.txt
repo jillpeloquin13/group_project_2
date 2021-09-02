@@ -1,0 +1,38 @@
+CREATE TABLE happy_2017 (
+id SERIAL PRIMARY KEY NOT NULL,
+rank INT,
+country text, 
+score real
+);
+
+CREATE TABLE happy_2018(
+id SERIAL PRIMARY KEY NOT NULL,
+rank INT,
+country text, 
+score real
+);
+
+CREATE TABLE happy_2019 (
+id SERIAL PRIMARY KEY NOT NULL,
+rank INT,
+country text, 
+score real
+);
+
+CREATE TABLE ramen_ratings (
+id SERIAL PRIMARY KEY NOT NULL,
+stars real,
+country text, 
+brand text,
+variety text,
+stars real
+);
+
+**// confirm data is present and that you can join on it **
+
+Select * from ramen_ratings
+Select * from happy_2017
+Select * from happy_2018
+Select * from happy_2019
+
+select r.*, h.* from ramen_ratings r, happy_2017 h where h.country = r.country
